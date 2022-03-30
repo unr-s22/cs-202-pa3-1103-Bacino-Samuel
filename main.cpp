@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <iostream>
 #include "Money.h"
 #include "Account.h"
@@ -45,11 +44,3 @@ int main() {
     
     return 0;
 }
-=======
-#include "Money.h"
-
-int main(){
-
-    return 0;
-}
->>>>>>> 4ebc7846a4c8f7208cdeefef35c70f23d9ce98b9
