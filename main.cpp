@@ -30,15 +30,20 @@ int main() {
     //operators
     if (o > k) {
         std::cout << "100.1 > 99.99: " << a.initialBalance << std::endl;
-    } else if (k < o) {
+    }
+    if (k < o) {
         std::cout << "99.99 < 100.1: " << a.initialBalance << std::endl;
-    } else if (k <= o) {
+    }
+    if (k <= o) {
         std::cout << "99.99 <= 100.1: " << a.initialBalance << std::endl;
-    } else if (o >= k) {
+    }
+    if (o >= k) {
         std::cout << "100.1 >= 99.99: " << a.initialBalance << std::endl;
-    } else if (o == o) {
+    }
+    if (o == o) {
         std::cout << "100.1 == 100.1: " << a.initialBalance << std::endl;
-    } else if (k != o) {
+    }
+    if (k != o) {
         std::cout << "99.99 != 100.1: " << a.initialBalance << std::endl;
     }
     

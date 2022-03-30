@@ -11,7 +11,7 @@ class Account{
     std::vector <Money> withdraws;
     std::vector <Money> deposits;
 
-    int tD, tW;
+    int tD = 0, tW = 0;
     bool needsUpdate = false;
 public:
     Money initialBalance;
