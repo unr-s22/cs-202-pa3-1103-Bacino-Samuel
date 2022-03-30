@@ -7,7 +7,6 @@
 #include "Money.h"
 
 class Account{
-    Money initialBalance;
 
     std::vector <Money> withdraws;
     std::vector <Money> deposits;
@@ -15,7 +14,9 @@ class Account{
     int tD, tW;
     bool needsUpdate = false;
 public:
+    Money initialBalance;
     Account(Money);
+
 
     void makeDeposit(Money);
     void makeWithdrawals(Money);
