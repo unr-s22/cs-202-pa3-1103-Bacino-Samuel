@@ -19,23 +19,19 @@ void Account::makeWithdrawals (Money c) {
 }
 
 std::ostream& operator<<(std::ostream &stream, const Account &acc){
+    Money z(0,0);
     if (acc.needsUpdate) {
-        if (acc.tD > 0) {
-            for (int i=0; i < acc.tD; i++) {
-                acc.newBal == acc.initialBalance + acc.deposits[i];
-                std::cout << "{{{" << acc.newBal;
-            }
+        int d, c;
+        for (Money a : acc.deposits) {
+            z = z+a;
         }
-        if (acc.tW > 0) {
-            for (int i=0; i < acc.tW; i++) {
-                acc.newBal == acc.initialBalance - acc.withdraws[i];
-                std::cout << "{{{" << acc.newBal;
-            }
+        for (Money w : acc.withdraws) {
+            z = z-w;
         }
     }
 
-    stream << "Account Details\n--------------------------\nCurrent Balance:" 
-    << acc.initialBalance << "--------------------------\nNumber of Deposits: " 
+    stream << "Account Details\n--------------------------\nCurrent Balance: " 
+    << acc.initialBalance+z << "--------------------------\nNumber of Deposits: " 
     << acc.tD << "\n--------------------------" << std::endl;
 
     for (int i=0; i < acc.deposits.size(); i++) {

@@ -14,7 +14,6 @@ class Account {
     bool needsUpdate = false;
 public:
     Money initialBalance;
-    Money newBal;
     Account(Money);
 
     void makeDeposit(Money);

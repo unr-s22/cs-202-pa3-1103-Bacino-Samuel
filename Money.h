@@ -15,15 +15,15 @@ class Money {
         int getDollars();
         int getCents();
 
-        bool operator<(const Money& rhs) const;
-        bool operator>(const Money& rhs) const;
-        bool operator<=(const Money& rhs) const;
-        bool operator>=(const Money& rhs) const; 
-        bool operator!=(const Money& rhs) const;
-        bool operator==(const Money& rhs) const;
+        friend bool operator<(const Money&, const Money&);
+        friend bool operator>(const Money&, const Money&);
+        friend bool operator<=(const Money&, const Money&);
+        friend bool operator>=(const Money&, const Money&); 
+        friend bool operator!=(const Money&, const Money&);
+        friend bool operator==(const Money&, const Money&);
 
-        Money operator+(const Money &m1) const; 
-        Money operator-(const Money &m1) const;
+        friend Money operator + (const Money&, const Money&);
+        friend Money operator - (const Money&, const Money&);
 
         friend ostream& operator<<(ostream &out, const Money &m);
 };
